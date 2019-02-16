@@ -4,3 +4,4 @@ secrets.json
 coverage.json
 /coverage/
 build/
+config/keys.js

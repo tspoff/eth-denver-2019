@@ -1,3 +1,6 @@
+var HDWalletProvider = require('truffle-hdwallet-provider');
+var mnemonic = require('./config/keys');
+
 module.exports = {
   networks: {
     live: {
@@ -8,6 +11,10 @@ module.exports = {
       // gas
       // gasPrice
       // from - default address to use for any transaction Truffle makes during migrations
+    },
+    rinkeby: {
+      provider: new HDWalletProvider(mnemonic, 'https://rinkeby.infura.io'),
+      network_id: 4
     },
     development: {
       host: '127.0.0.1',
